@@ -1,0 +1,50 @@
+{
+  "name": "karimdm",
+  "version": "1.0.0",
+  "description": "A free, restart-safe download manager made for Karim",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test engine.test.js",
+    "test:ui": "node ui-test.cjs",
+    "dist:win": "electron-builder --win portable --x64"
+  },
+  "keywords": [],
+  "author": "Karim",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.0",
+    "playwright": "^1.56.1"
+  },
+  "build": {
+    "appId": "com.karim.downloadmanager",
+    "productName": "KarimDM",
+    "files": [
+      "main.js",
+      "preload.js",
+      "engine.js",
+      "index.html",
+      "style.css",
+      "renderer.js",
+      "icon.png",
+      "icon.ico",
+      "self-test.js",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "icon.ico",
+      "signAndEditExecutable": false
+    },
+    "artifactName": "KarimDM-${version}-Windows-x64.${ext}",
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "overrides": {
+    "minimatch": "^10.2.4"
+  }
+}
