@@ -1,12 +1,12 @@
-# KarimDM 1.0.0
+# KarimDM 1.0.1
 
 Free portable download manager for Karim, Windows 10/11 x64.
 
 Download the `.exe` asset below. No Node.js or Python installation is needed.
 
-Features: parallel byte-range transfers, persistent pause/resume, download queue, concurrency settings, URL paste/drop, folder picker, speed/progress/ETA, and safe filename collision handling.
+Features: up to 32 parallel byte-range connections per file where supported, parallel byte-range transfers, persistent pause/resume, download queue, concurrency settings, URL paste/drop, folder picker, speed/progress/ETA, and safe filename collision handling.
 
-Limits: direct HTTP/HTTPS file URLs only, no browser extension, no authenticated browser cookies, no DRM/video extraction. Resume requires a stable file, byte-range support and a usable server validator. Unsupported servers restart single-stream. Multiple connections do not guarantee greater speed.
+Limits: direct HTTP/HTTPS file URLs only, no browser extension, no authenticated browser cookies, no DRM/video extraction. Resume requires a stable file, byte-range support and a usable server validator. Unsupported servers restart single-stream. Multiple connections do not guarantee greater speed. Servers may cap connections, and very high connection counts can reduce performance or trigger server limits.
 
 The application is not code-signed. Windows may show an unknown-publisher warning. Verify the SHA-256 against SHA256SUMS.txt and use your usual security checks. Do not disable antivirus protection.
 
