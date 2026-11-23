@@ -1,6 +1,6 @@
 {
   "name": "karimdm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A free, restart-safe download manager made for Karim",
   "main": "main.js",
   "scripts": {
