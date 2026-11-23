@@ -96,7 +96,7 @@ class DownloadManager extends EventEmitter {
   }
   async configure(settings) {
     if(settings.maxConcurrent!==undefined) this.maxConcurrent=Math.max(1,Math.min(6,Number(settings.maxConcurrent)||2));
-    if(settings.segments!==undefined) this.segments=Math.max(1,Math.min(8,Number(settings.segments)||4));
+    if(settings.segments!==undefined) this.segments=Math.max(1,Math.min(32,Number(settings.segments)||4));
     if(settings.defaultFolder) this.defaultFolder=settings.defaultFolder;
     await this.save();this.changed();this.pump();
   }
