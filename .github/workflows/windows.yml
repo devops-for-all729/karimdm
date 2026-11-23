@@ -1,7 +1,5 @@
 name: Windows build and verification
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: write
@@ -61,7 +59,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.0.0
-          if ($LASTEXITCODE -eq 0) { throw 'Release v1.0.0 already exists. Review before replacing binaries.' }
-          gh release create v1.0.0 dist/*.exe dist/SHA256SUMS.txt --title 'KarimDM 1.0.0' --notes-file RELEASE_NOTES.md
+          gh release view v1.0.1
+          if ($LASTEXITCODE -eq 0) { throw 'Release v1.0.1 already exists. Review before replacing binaries.' }
+          gh release create v1.0.1 dist/*.exe dist/SHA256SUMS.txt --title 'KarimDM 1.0.1' --notes-file RELEASE_NOTES.md
           if ($LASTEXITCODE -ne 0) { throw 'Release upload failed' }
